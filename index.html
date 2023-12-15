@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Mais Value</title>
+</head>
+<body>
+
+  <header>
+    <a href="#">
+      <img id="logo" src="./images/logo.png" alt="Logo">
+    </a>
+    
+    <div id="buttons">
+      <button>QUEM SOMOS</button>
+      <button>NOSSO PÚBLICO</button>
+      <button>FALE CONOSCO</button>
+    </div>
+  </header>
+  <div class="background-images">
+    <div class="background-image active" style="background-image: url('./images/IMAGEM\ 1.jpg');"></div>
+    <div class="background-image" style="background-image: url('./images/IMAGEM\ 2.jpg');"></div>
+    <div class="background-image" style="background-image: url('./images/IMAGEM\ 3.jpg');"></div>
+    <div class="background-image" style="background-image: url('./images/IMAGEM\ 4.jpg');"></div>
+  </div>  
+  <div class="overlay">
+    <img src="./images/logo mais value.png" alt="Imagem" class="overlay-image">
+    <p class="overlay-text">APROVEITE SEU RESÍDUO AGROPECUÁRIO</p>
+    <p class="overlay-subtext">
+      Gestão e venda eficiente de resíduos agropecuários.
+      Contribua para o <br> meio ambiente e aumente seus lucros.
+    </p>
+  </div>
+  <div class="saiba-mais-button">
+    <a href="#" class="saiba-mais-link">SAIBA MAIS</a>
+  </div>
+  <div class="photo-container">
+    <img src="./images/ICONES.png" alt="Foto Adicional">
+  </div>
+  <div class="photo-container1">
+    <img src="./images/INFOS.png" alt="infos">
+  </div>
+  <div class="container">
+    <div class="rectangle">
+      <div class="left-side">
+        <img src="./images/TRATOR.png" alt="Foto">
+      </div>
+      <div class="right-side">
+        <p class="rectangle-text">Vender Recursos</p>
+        <p class="rectangle-subtext">
+          Para aqueles que têm recursos para fazermos uma busca<br>minunciosa, encontrando os compradores ideais e garantindo que<br> seus materiais sejam devidamente valorizados.<br>
+        </p>
+        <div class="comece-ja-button">
+          <a href="#" class="comece-ja-link">COMECE JÁ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="rectangle1">
+      <div class="left-side1">
+        <img src="./images/TRATOR.png" alt="Foto">
+      </div>
+      <div class="right-side1">
+        <p class="rectangle-text1">Comprar Matéria-prima</p>
+        <p class="rectangle-subtext1">
+          Para os que procuram matéria-prima de qualidade verificada,<br> oferecemos uma seleção confiável de fornecedores. Valorizamos<br>ambos os lados, garantindo que todos saiam ganhando.
+        </p>
+        <div class="comece-ja-button1">
+          <a href="#" class="comece-ja-link1">COMECE JÁ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="green-line"></div>
+  <h1 class="title">Faça diferente com a +VALUE!</h1>
+  <div class="icones">
+    <div>
+      <img src="./images/dinheiro.png" alt="Foto 1">
+      <h1 class="titulo">Acesso à Economia Circular:</h1>
+      <p class="subtitulo">Transforme resíduos em recursos<br>valiosos.</p>
+    </div>
+    <div>
+      <img src="./images/mao.png" alt="Foto 2">
+      <h1 class="titulo">Acesso à Economia Circular:</h1>
+      <p class="subtitulo">Transforme resíduos em recursos<br>valiosos.</p>
+    </div>
+    <div>
+      <img src="./images/caminhao.png" alt="Foto 3">
+      <h1 class="titulo">Logísitica Integrada:</h1>
+      <p class="subtitulo">rastreie em tempo real as rotas<br>de seus resíduos.</p>
+    </div>
+    <div>
+      <img src="./images/protecao.png" alt="Foto 3">
+      <h1 class="titulo">Armazenamento de Dados Seguro:</h1>
+      <p class="subtitulo">armazenamos seus dados com<br>segurança e acesse o que precisar.</p>
+    </div>
+    <div>
+      <img src="./images/certificado.png" alt="Foto 3">
+      <h1 class="titulo"> Certificação de Eficiência</h1>
+      <p class="subtitulo">reforce sua posição no mercado com<br> a certificação de sustentabilidade.</p>
+    </div>
+  </div>
+    <div class="photo-container1">
+    <img src="./images/INFOS.png" alt="infos">
+  </div>
+</body>
+<script>
+  const images = document.querySelectorAll('.background-image');
+  let index = 0;
+
+  function showImage() {
+    images.forEach(image => {
+      image.classList.remove('active');
+    });
+
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }
+
+  function startSlideshow() {
+    showImage();
+    setInterval(showImage, 5000); 
+  }
+
+  startSlideshow();
+</script>
+
+
+</html>
